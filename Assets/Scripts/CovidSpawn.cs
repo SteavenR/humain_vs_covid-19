@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CovidSpawn : MonoBehaviour
 {
-    public GameObject[] covidPrefab;
+    public GameObject[] covidPrefabs;
     // Variable limitant la position à la pateforme du jeu
     private float spawnRangeX = 18;
     private float spawnPosZ = 23;
@@ -27,7 +27,7 @@ public class CovidSpawn : MonoBehaviour
 
         // Génère une boule de Covid-19 au hasard (grace au SPAWNPOS il s'ajoute a la fonction d'en haut pour générer une 
         // Position au hasard.)
-        int covidIndex = Random.Range(0, covidPrefab.Length);
-        Instantiate(covidPrefab[covidIndex], spawnPos, covidPrefab[covidIndex].transform.rotation);
+        int covidIndex = Random.Range(0, covidPrefabs.Length);
+        Instantiate(covidPrefabs[covidIndex], spawnPos, covidPrefabs[covidIndex].transform.rotation);
     }
 }
